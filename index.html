@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Bunga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#about-us">Tentang Kami</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+        <!-- Ikon Keranjang -->
+        <div class="cart">
+            <a href="#cart">Keranjang <span id="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+<section id="home">
+ <h1>Selamat Datang di Toko Bunga Kami</h1>
+<p>Temukan berbagai macam bunga indah untuk segala acara. Kami menyediakan rangkaian bunga berkualitas dan pelayanan terbaik.</p>
+</section>
+
+    <!-- Daftar Produk -->
+    <section id="products">
+        <h3>Produk Kami</h3>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="bunga1.jpg" alt="Bunga Mawar">
+                <h4>Mawar Merah</h4>
+                <p>50.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="bunga2.jpg" alt="Bunga Tulip">
+                <h4>Tulip</h4>
+                <p>75.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="bunga3.jpg" alt="Bunga Matahari">
+                <h4>Matahari</h4>
+                <p>65.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+             <div class="product-item">
+                <img src="bunga4.jpg" alt="Bunga Edelweis">
+                <h4>Edelweis</h4>
+                <p>65.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+             <div class="product-item">
+                <img src="bunga5.jpg" alt="Bunga lavender">
+                <h4>Lavender</h4>
+                <p>65.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+             <div class="product-item">
+                <img src="bunga6.jpg" alt="Bunga Krisan">
+                <h4>krisan</h4>
+                <p>15.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+             <div class="product-item">
+                <img src="bunga7.jpg" alt="Bunga Baby's Breath">
+                <h4>Baby's Breath</h4>
+                <p>15.000</p>
+                <button class="add-to-cart">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+ <!-- Tentang Kami Section -->
+<section id="about-us">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Tentang Kami</h2>
+            <p> Toko bunga kami berdedikasi untuk memberikan rangkaian bunga berkualitas tinggi yang indah untuk segala acara. Dengan pengalaman bertahun-tahun dalam industri bunga, kami memahami betapa pentingnya sentuhan pribadi pada setiap rangkaian bunga yang kami buat. Kami menggunakan bunga segar terbaik dari pemasok terpercaya dan memastikan setiap rangkaian disusun dengan hati-hati.</p>
+            <h2>visi</h2> 
+            <p> Menjadi toko bunga terdepan yang menginspirasi dan membantu setiap orang menyampaikan emosi mereka melalui keindahan bunga, menciptakan momen berkesan yang abadi dengan rangkaian bunga berkualitas tinggi. </p>
+            <h2> Misi </h2>
+             <p>Menyediakan rangkaian bunga segar berkualitas tinggi yang indah dan kreatif untuk setiap kesempatan.</p>
+                <p>Memberikan layanan pelanggan terbaik dengan perhatian pada setiap detail pesanan pelanggan.</p>
+                <p>Membantu pelanggan mengekspresikan perasaan mereka dengan rangkaian bunga yang bermakna dan personal.</p>
+                <p>Menggunakan bahan-bahan terbaik dan bekerja sama dengan pemasok lokal untuk mendukung komunitas.</p>
+                <p>Memastikan pengalaman berbelanja yang mudah, cepat, dan memuaskan baik secara online maupun offline.</p>
+        </div>
+        <div class="about-image">
+            <img src="about-flower.jpg" alt="Tentang Kami - Toko Bunga" />
+        </div>
+    </div>
+</section>
+
+<section id="cart">
+    <h3>Keranjang Belanja</h3>
+    <p>Item dalam keranjang.</p>
+     <div id="cart-items">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <!-- Item yang ditambahkan ke keranjang akan muncul di sini -->
+    </div>
+    <h4 id="cart-total">Total: Rp 0</h4> <!-- Menampilkan total harga -->
+    <button id="checkout-btn">Proses Pembayaran</button> <!-- Tombol untuk proses checkout -->
+</section>
+
+<section id="payment-form" style="display: none;">
+    <h3>Form Pembayaran</h3>
+    <form id="payment" onsubmit="return processPayment()">
+        <label for="name">Nama Lengkap:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="address">Alamat Pengiriman:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+<h3>Pilih Metode Pembayaran</h3>
+<form action="https://payment-gateway-url.com" method="POST">
+    <label for="payment-method">Metode Pembayaran:</label>
+    <select name="payment-method" id="payment-method">
+        <option value="gopay">GoPay</option>
+        <option value="ovo">OVO</option>
+        <option value="dana">DANA</option>
+        <option value="bca-transfer">Transfer Bank BCA</option>
+        <option value="bni-transfer">Transfer Bank BNI</option>
+    </select>
+
+<h3>Pembayaran melalui Transfer Bank</h3>
+<p>Silakan transfer ke rekening berikut:</p>
+<ul>
+    <li>Bank: Bank BCA</li>
+    <li>Nomor Rekening: 1234567890</li>
+    <li>Nomor ovo, gopay, dana: 085281700840</li>
+    <li>Atas Nama: Mufira's Flowers</li>
+</ul>
+<p>Setelah melakukan pembayaran, silakan upload bukti transfer di bawah ini:</p>
+<form action="upload-bukti.php" method="POST" enctype="multipart/form-data">
+    <input type="file" name="bukti-pembayaran" accept="image/*">
+    <button type="submit">Upload Bukti Pembayaran</button>
+</form>
+
+    <button type="submit">Bayar Sekarang</button>
+</form>
+
+</section>
+
+  <!-- Kontak Section -->
+<section id="contact">
+    <h2>Kontak Kami</h2>
+
+        <div class="contact-details">
+            <!-- Alamat -->
+            <div class="contact-box">
+                <i class="fa fa-map-marker"></i>
+                <h3>Our Location</h3>
+                <span>Jl. Srijaya Negara,Bukit Lama</span>
+            </div>
+            <!-- No WhatsApp -->
+            <div class="contact-box">
+                <i class="fa fa-whatsapp"></i>
+                <h3>No WhatsApp</h3>
+                <span>+62 812-3456-7890</span>
+
+                <!-- Tombol WhatsApp -->
+        <p>WhatsApp: <a href="https://wa.me/6285281700840?text=Halo,%20saya%20ingin%20menanyakan%20produk%20bunga%20Anda" 
+                        class="whatsapp-link" target="_blank">Hubungi Kami di WhatsApp</a></p>
+
+            </div>
+            <!-- Email -->
+            <div class="contact-box">
+                <i class="fa fa-envelope"></i>
+                <h3>Email</h3>
+                <span>mufira'sflowers@gmail.com</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
